@@ -27,8 +27,8 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     env:
-      PROJECT_NAME: "powerpage-erp"
-      SOLUTION_PATH: "powerpage.sln"
+      PROJECT_NAME: "seniorblockchain-cms"
+      SOLUTION_PATH: "seniorblockchain-cms.sln"
       PROJECT_PATH: "src/powerpage/powerpage.csproj"
       BUILD_CONFIGURATION: "Release"
 
