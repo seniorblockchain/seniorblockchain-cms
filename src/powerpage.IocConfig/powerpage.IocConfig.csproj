@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\powerpage.Common\powerpage.Common.csproj" />
+    <ProjectReference Include="..\powerpage.DataLayer\powerpage.DataLayer.csproj" />
+    <ProjectReference Include="..\powerpage.Entities\powerpage.Entities.csproj" />
+    <ProjectReference Include="..\powerpage.ViewModels\powerpage.ViewModels.csproj" />
+    <ProjectReference Include="..\powerpage.Services\powerpage.Services.csproj" />
+
+    <ProjectReference Include="..\powerpage.DataLayer.InMemoryDatabase\powerpage.DataLayer.InMemoryDatabase.csproj" />
+    <ProjectReference Include="..\powerpage.DataLayer.MSSQL\powerpage.DataLayer.MSSQL.csproj" />
+    <ProjectReference Include="..\powerpage.DataLayer.SQLite\powerpage.DataLayer.SQLite.csproj" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+    <PackageReference Include="LigerShark.WebOptimizer.Core" />
+  </ItemGroup>
+</Project>

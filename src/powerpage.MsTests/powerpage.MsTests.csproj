@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\powerpage\appsettings.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\powerpage.DataLayer\powerpage.DataLayer.csproj" />
+    <ProjectReference Include="..\powerpage.Entities\powerpage.Entities.csproj" />
+    <ProjectReference Include="..\powerpage.Services\powerpage.Services.csproj" />
+    <ProjectReference Include="..\powerpage.ViewModels\powerpage.ViewModels.csproj" />
+    <ProjectReference Include="..\powerpage.IocConfig\powerpage.IocConfig.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DNTCommon.Web.Core" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="MSTest.TestAdapter" />
+    <PackageReference Include="MSTest.TestFramework" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+</Project>

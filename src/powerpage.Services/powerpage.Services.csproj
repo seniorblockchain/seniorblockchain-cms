@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\powerpage.Common\powerpage.Common.csproj" />
+    <ProjectReference Include="..\powerpage.DataLayer\powerpage.DataLayer.csproj" />
+    <ProjectReference Include="..\powerpage.Entities\powerpage.Entities.csproj" />
+    <ProjectReference Include="..\powerpage.ViewModels\powerpage.ViewModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DNTCommon.Web.Core" />
+    <PackageReference Include="LinqKit" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+  </ItemGroup>
+</Project>

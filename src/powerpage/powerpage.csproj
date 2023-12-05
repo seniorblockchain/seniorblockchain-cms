@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<UserSecretsId>f81195c3-4b25-41b5-bec6-d03a8accb7c0</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerfileContext>..\..</DockerfileContext>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Update="wwwroot\**\*;Views\**\*;Areas\**\*.cshtml">
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\powerpage.Common\powerpage.Common.csproj" />
+		<ProjectReference Include="..\powerpage.Entities\powerpage.Entities.csproj" />
+		<ProjectReference Include="..\powerpage.Services\powerpage.Services.csproj" />
+		<ProjectReference Include="..\powerpage.ViewModels\powerpage.ViewModels.csproj" />
+		<ProjectReference Include="..\powerpage.IocConfig\powerpage.IocConfig.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="DNTBreadCrumb.Core" />
+		<PackageReference Include="DNTCaptcha.Core" />
+		<PackageReference Include="DNTCommon.Web.Core" />
+		<PackageReference Include="LigerShark.WebOptimizer.Core" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+		<PackageReference Include="Microsoft.Web.LibraryManager.Build" />
+	</ItemGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+		<PlatformTarget>anycpu</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- extends watching group to include *.js files -->
+		<Watch Include="**\*.js" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*;wwwroot\**\*;src\**\*" />
+		<None Include="*.json" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+</Project>
